@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  beginning: 2025-06-07 19:59:38
+  end: 2025-06-07 19:59:38
+  value: 9.99
+  description: MyText
+  user: one
+  customer: one
+
+two:
+  beginning: 2025-06-07 19:59:38
+  end: 2025-06-07 19:59:38
+  value: 9.99
+  description: MyText
+  user: two
+  customer: two
