@@ -1,0 +1,16 @@
+<h1>Cadastras Usuario</h1>
+<%= form_with model: @user do |f|%>
+ <%= f.label :email_address %>
+ <%= f.text_field :email_address %>
+
+ <%= f.label :password %>
+ <%= f.password_field :password %>
+
+ <%= f.label :phone %>
+ <%= f.text_field :phone %>
+
+ <%= f.label :name %>
+ <%= f.text_field :name %>
+
+ <%= f.submit "Salvar" %>
+<% end %>
