@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th>nome</th>
+            <th>valor</th>
+            <th>duração</th>
+            <th>descrição</th>
+        </tr>
+    </thead>
+
+    <tbody>
+       <% @services.each do |s| %>
+        <tr>
+            <td><%= s.name %></td>
+            <td><%= s.value %></td>
+            <td><%= s.duration %> </td>
+            <td><%= s.description %> </td>
+        </tr>
+       <%end%>
+    </tbody>
+</table>

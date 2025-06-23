@@ -1,0 +1,31 @@
+<h1>Criar Serviço</h1>
+
+
+<%= form_with model: @service do |form|%>
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name%>
+    </div>
+
+    <div>
+        <%= form.label :value %>
+        <%= form.number_field :value%>
+    </div>
+
+    <div>
+        <%= form.label :duration %>
+        <%= form.number_field :duration%>
+    </div>
+
+    <div>
+        <%= form.label :description %>
+        <%= form.text_field :description%>
+    </div>
+
+    <div>
+        <%= form.submit "Criar"%>
+    </div>
+
+
+
+<%end%>
