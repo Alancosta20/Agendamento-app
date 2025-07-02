@@ -15,4 +15,5 @@ Rails.application.routes.draw do
   root "services#index"
   resources :users
   resources :services
+  resources :customers
 end

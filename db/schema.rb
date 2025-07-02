@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_06_23_234637) do
+ActiveRecord::Schema[8.0].define(version: 2025_07_02_140051) do
   create_table "anamneses", force: :cascade do |t|
     t.integer "user_id", null: false
     t.datetime "created_at", null: false
@@ -45,6 +45,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_23_234637) do
     t.text "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_customers_on_user_id"
   end
 
   create_table "options", force: :cascade do |t|
@@ -120,6 +122,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_06_23_234637) do
   add_foreign_key "answer_options", "options"
   add_foreign_key "customer_anamneses", "anamneses", column: "anamnesis_id"
   add_foreign_key "customer_anamneses", "customers"
+  add_foreign_key "customers", "users"
   add_foreign_key "options", "questions"
   add_foreign_key "questions", "anamneses", column: "anamnesis_id"
   add_foreign_key "schedulings", "customers"

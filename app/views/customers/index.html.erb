@@ -1,0 +1,29 @@
+<table>
+    <thead>
+        <tr>
+            <th>nome</th>
+            <th>telefone</th>
+            <th>cpf</th>
+            <th>email</th>
+            <th>Editar</th>
+            <th>descrição</th>
+            <th>ANIQUILAR</th>
+        </tr>
+    </thead>
+
+    <tbody>
+       <% @customers.each do |s| %>
+        <tr>
+            <td><%= s.name %></td>
+            <td><%= s.phone %></td>
+            <td><%= s.cpf %> </td>
+            <td><%= s.email %> </td>
+            <td><%= s.description %> </td>
+            <td><%= link_to "Editar", edit_customer_path(s) %></td>
+            <td><%= link_to "ANIQUILAR", customer_path(s), data:{turbo_method: :delete}%>  </td>
+        </tr>
+       <%end%>
+    </tbody>
+</table>
+
+<%=link_to "Adicionar Cliente", new_customer_path %> 

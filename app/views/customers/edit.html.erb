@@ -1,0 +1,34 @@
+<h1>Editar Cliente</h1>
+
+
+<%= form_with model: @customer do |form|%>
+    <div>
+        <%= form.label :name %>
+        <%= form.text_field :name%>
+    </div>
+
+    <div>
+        <%= form.label :phone %>
+        <%= form.number_field :phone%>
+    </div>
+
+    <div>
+        <%= form.label :cpf %>
+        <%= form.number_field :cpf%>
+    </div>
+
+    <div>
+        <%= form.label :email %>
+        <%= form.text_field :email%>
+    </div>
+
+    <div>
+        <%= form.label :description %>
+        <%= form.text_field :description%>
+    </div>
+
+    <div>
+        <%= form.submit "Editar"%>
+    </div>
+
+<%end%>
